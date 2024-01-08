@@ -2,6 +2,7 @@
     --font-color: rgb(82, 124, 141);
     --container-background-color: aliceblue;
     --animated-background-svg-color: cadetblue;
+    --foreground-animated-svg-size: 3cqw;
 }
 
 *,
@@ -43,15 +44,74 @@
     animation: animate-background 5s linear infinite;
 }
 
-.animated-background .foreground {
-    --foreground-animated-svg-size: 8cqw;
-
-    opacity: .6;
+/* foreground svgs in the animated background */
+.foreground svg {
+    opacity: .5;
     bottom: 0;
     left: calc(var(--foreground-animated-svg-size)*-1);
     width: var(--foreground-animated-svg-size);
     height: var(--foreground-animated-svg-size);
-    animation-duration: 3s;
+    animation-duration: 2s;
+}
+
+/* the second torii gate */
+.foreground svg:nth-child(2) {
+    --custom-size: calc(var(--foreground-animated-svg-size)*0.7);
+
+    animation-delay: .7s;
+    left: calc(var(--custom-size)*-1);
+    width: var(--custom-size);
+    height: var(--custom-size);
+}
+
+/* the first tree */
+.foreground svg:nth-child(3) {
+    --custom-size: calc(var(--foreground-animated-svg-size)*.8);
+
+    animation-delay: 1.2s;
+    left: calc(var(--custom-size)*-1);
+    width: var(--custom-size);
+    height: var(--custom-size);
+}
+
+/* the second tree */
+.foreground svg:nth-child(4) {
+    --custom-size: calc(var(--foreground-animated-svg-size)*.9);
+
+    animation-delay: .5s;
+    left: calc(var(--custom-size)*-1);
+    width: var(--custom-size);
+    height: var(--custom-size);
+}
+
+/* the third tree */
+.foreground svg:nth-child(5) {
+    --custom-size: calc(var(--foreground-animated-svg-size)*1.1);
+
+    animation-delay: 1.25s;
+    left: calc(var(--custom-size)*-1);
+    width: var(--custom-size);
+    height: var(--custom-size);
+}
+
+/* the fourth tree */
+.foreground svg:nth-child(6) {
+    --custom-size: calc(var(--foreground-animated-svg-size)*.9);
+
+    animation-delay: 1.29s;
+    left: calc(var(--custom-size)*-1);
+    width: var(--custom-size);
+    height: var(--custom-size);
+}
+
+/* the fourth tree */
+.foreground svg:nth-child(7) {
+    --custom-size: calc(var(--foreground-animated-svg-size)*1.1);
+
+    animation-delay: .45s;
+    left: calc(var(--custom-size)*-1);
+    width: var(--custom-size);
+    height: var(--custom-size);
 }
 
 .animated-background .middleground {
@@ -74,10 +134,6 @@
     width: var(--background-animated-svg-size);
     height: var(--background-animated-svg-size);
     animation-duration: 3s;
-}
-
-.animated-background svg:nth-child(1) {
-    /* animation-delay: 2s; */
 }
 
 @keyframes animate-background {

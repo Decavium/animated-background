@@ -2,7 +2,7 @@
     --font-color: rgb(82, 124, 141);
     --container-background-color: aliceblue;
     --animated-background-svg-color: cadetblue;
-    --foreground-animated-svg-size: 3cqw;
+    --layer-1-animated-svg-size: 3cqw;
 }
 
 *,
@@ -19,7 +19,7 @@
     transform: translate(-50%, -50%);
     aspect-ratio: 6/2;
     border-radius: 1cqi;
-    background-color: var(--container-background-color);
+    background: var(--container-background-color);
     padding: 2rem;
     box-shadow: 0 .2rem .2rem 0 rgba(0, 0, 0, 0.08);
     font-family: system-ui, sans-serif;
@@ -44,19 +44,19 @@
     animation: animate-background 5s linear infinite;
 }
 
-/* foreground svgs in the animated background */
-.foreground svg {
+/* layer-1 svgs in the animated layer-3 */
+.layer-1 svg {
     opacity: .5;
     bottom: 0;
-    left: calc(var(--foreground-animated-svg-size)*-1);
-    width: var(--foreground-animated-svg-size);
-    height: var(--foreground-animated-svg-size);
+    left: calc(var(--layer-1-animated-svg-size)*-1);
+    width: var(--layer-1-animated-svg-size);
+    height: var(--layer-1-animated-svg-size);
     animation-duration: 2s;
 }
 
 /* the second torii gate */
-.foreground svg:nth-child(2) {
-    --custom-size: calc(var(--foreground-animated-svg-size)*0.7);
+.layer-1 svg:nth-child(2) {
+    --custom-size: calc(var(--layer-1-animated-svg-size)*0.7);
 
     animation-delay: .7s;
     left: calc(var(--custom-size)*-1);
@@ -65,8 +65,8 @@
 }
 
 /* the first tree */
-.foreground svg:nth-child(3) {
-    --custom-size: calc(var(--foreground-animated-svg-size)*.8);
+.layer-1 svg:nth-child(3) {
+    --custom-size: calc(var(--layer-1-animated-svg-size)*.8);
 
     animation-delay: 1.2s;
     left: calc(var(--custom-size)*-1);
@@ -75,8 +75,8 @@
 }
 
 /* the second tree */
-.foreground svg:nth-child(4) {
-    --custom-size: calc(var(--foreground-animated-svg-size)*.9);
+.layer-1 svg:nth-child(4) {
+    --custom-size: calc(var(--layer-1-animated-svg-size)*.9);
 
     animation-delay: .5s;
     left: calc(var(--custom-size)*-1);
@@ -85,8 +85,8 @@
 }
 
 /* the third tree */
-.foreground svg:nth-child(5) {
-    --custom-size: calc(var(--foreground-animated-svg-size)*1.1);
+.layer-1 svg:nth-child(5) {
+    --custom-size: calc(var(--layer-1-animated-svg-size)*1.1);
 
     animation-delay: 1.25s;
     left: calc(var(--custom-size)*-1);
@@ -95,8 +95,8 @@
 }
 
 /* the fourth tree */
-.foreground svg:nth-child(6) {
-    --custom-size: calc(var(--foreground-animated-svg-size)*.9);
+.layer-1 svg:nth-child(6) {
+    --custom-size: calc(var(--layer-1-animated-svg-size)*.9);
 
     animation-delay: 1.29s;
     left: calc(var(--custom-size)*-1);
@@ -105,8 +105,8 @@
 }
 
 /* the fourth tree */
-.foreground svg:nth-child(7) {
-    --custom-size: calc(var(--foreground-animated-svg-size)*1.1);
+.layer-1 svg:nth-child(7) {
+    --custom-size: calc(var(--layer-1-animated-svg-size)*1.1);
 
     animation-delay: .45s;
     left: calc(var(--custom-size)*-1);
@@ -114,25 +114,24 @@
     height: var(--custom-size);
 }
 
-.animated-background .middleground {
-    --middleground-animated-svg-size: 8cqw;
-
+/* layer-2 svgs in the animated layer-3 */
+.layer-2 svg {
     opacity: .6;
     bottom: 0;
-    left: calc(var(--middleground-animated-svg-size)*-1);
-    width: var(--middleground-animated-svg-size);
-    height: var(--middleground-animated-svg-size);
-    animation-duration: 3s;
+    left: calc(var(--layer-1-animated-svg-size)*-1);
+    width: var(--layer-1-animated-svg-size);
+    height: var(--layer-1-animated-svg-size);
+    animation-duration: 3.5s;
 }
 
-.animated-background .background {
-    --background-animated-svg-size: 8cqw;
+.animated-background .layer-3 {
+    --layer-3-animated-svg-size: 8cqw;
 
     opacity: .6;
     bottom: 0;
-    left: calc(var(--background-animated-svg-size)*-1);
-    width: var(--background-animated-svg-size);
-    height: var(--background-animated-svg-size);
+    left: calc(var(--layer-3-animated-svg-size)*-1);
+    width: var(--layer-3-animated-svg-size);
+    height: var(--layer-3-animated-svg-size);
     animation-duration: 3s;
 }
 

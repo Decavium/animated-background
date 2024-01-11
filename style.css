@@ -2,7 +2,6 @@
     --font-color: rgb(82, 124, 141);
     --container-background-color: aliceblue;
     --animated-background-svg-color: cadetblue;
-    --layer-1-animated-svg-size: 3cqw;
 }
 
 *,
@@ -39,19 +38,25 @@
 
 .animated-background svg {
     fill: var(--animated-background-svg-color);
-    opacity: .15;
     position: absolute;
     animation: animate-background 5s linear infinite;
 }
 
-/* layer-1 svgs in the animated layer-3 */
+@keyframes animate-background {
+    from {
+        transform: translateX(100cqw);
+    }
+}
+
 .layer-1 svg {
-    opacity: .5;
+    --layer-1-animated-svg-size: 3cqw;
+
+    opacity: .4;
     bottom: 0;
     left: calc(var(--layer-1-animated-svg-size)*-1);
     width: var(--layer-1-animated-svg-size);
     height: var(--layer-1-animated-svg-size);
-    animation-duration: 2s;
+    animation-duration: 2.3s;
 }
 
 /* the second torii gate */
@@ -114,29 +119,96 @@
     height: var(--custom-size);
 }
 
-/* layer-2 svgs in the animated layer-3 */
 .layer-2 svg {
-    opacity: .6;
-    bottom: 0;
-    left: calc(var(--layer-1-animated-svg-size)*-1);
-    width: var(--layer-1-animated-svg-size);
-    height: var(--layer-1-animated-svg-size);
-    animation-duration: 3.5s;
+    --layer-2-animated-svg-size: 4cqw;
+
+    opacity: .15;
+    bottom: .5cqw;
+    left: calc(var(--layer-2-animated-svg-size)*-1);
+    width: var(--layer-2-animated-svg-size);
+    height: var(--layer-2-animated-svg-size);
+    animation-duration: 4s;
 }
 
-.animated-background .layer-3 {
-    --layer-3-animated-svg-size: 8cqw;
+.layer-2 svg:nth-child(2) {
+    --custom-size: calc(var(--layer-2-animated-svg-size)*0.7);
 
-    opacity: .6;
-    bottom: 0;
+    animation-delay: .7s;
+    left: calc(var(--custom-size)*-1);
+    width: var(--custom-size);
+    height: var(--custom-size);
+}
+
+.layer-2 svg:nth-child(3) {
+    --custom-size: calc(var(--layer-2-animated-svg-size)*.8);
+
+    animation-delay: 1.7s;
+    left: calc(var(--custom-size)*-1);
+    width: var(--custom-size);
+    height: var(--custom-size);
+}
+
+.layer-2 svg:nth-child(4) {
+    --custom-size: calc(var(--layer-2-animated-svg-size)*.9);
+
+    animation-delay: .5s;
+    left: calc(var(--custom-size)*-1);
+    width: var(--custom-size);
+    height: var(--custom-size);
+}
+
+.layer-2 svg:nth-child(5) {
+    --custom-size: calc(var(--layer-2-animated-svg-size)*.8);
+
+    animation-delay: 2.5s;
+    left: calc(var(--custom-size)*-1);
+    width: var(--custom-size);
+    height: var(--custom-size);
+}
+
+.layer-2 svg:nth-child(6) {
+    --custom-size: calc(var(--layer-2-animated-svg-size)*.8);
+
+    animation-delay: 3.2s;
+    left: calc(var(--custom-size)*-1);
+    width: var(--custom-size);
+    height: var(--custom-size);
+}
+
+.layer-3 svg {
+    --layer-3-animated-svg-size: 6cqw;
+
+    opacity: .1;
+    bottom: .3cqw;
     left: calc(var(--layer-3-animated-svg-size)*-1);
     width: var(--layer-3-animated-svg-size);
     height: var(--layer-3-animated-svg-size);
-    animation-duration: 3s;
+    animation-duration: 5s;
 }
 
-@keyframes animate-background {
-    from {
-        transform: translateX(100cqw);
-    }
+.layer-3 svg:nth-child(2) {
+    --custom-size: calc(var(--layer-3-animated-svg-size)*1.2);
+
+    animation-delay: 1s;
+    left: calc(var(--custom-size)*-1);
+    width: var(--custom-size);
+    height: var(--custom-size);
+}
+
+.layer-3 svg:nth-child(3) {
+    --custom-size: calc(var(--layer-3-animated-svg-size)*.9);
+
+    animation-delay: 2s;
+    left: calc(var(--custom-size)*-1);
+    width: var(--custom-size);
+    height: var(--custom-size);
+}
+
+.layer-3 svg:nth-child(4) {
+    --custom-size: calc(var(--layer-3-animated-svg-size)*.9);
+
+    animation-delay: 3.2s;
+    left: calc(var(--custom-size)*-1);
+    width: var(--custom-size);
+    height: var(--custom-size);
 }

@@ -1,6 +1,8 @@
 :root {
     --font-color: white;
-    --container-background-color: linear-gradient(180deg, rgb(249, 252, 255), rgb(171, 194, 202));
+    --container-background-color: linear-gradient(180deg,
+            rgb(240, 242, 245),
+            rgb(171, 194, 202));
     --animated-background-svg-color: rgb(78, 133, 134);
 }
 
@@ -21,16 +23,17 @@
 
     /* style container */
     aspect-ratio: 7/2;
-    max-width: 15rem;
-    border-radius: .7cqi;
+    /*   max-width: 15rem; */
+    border-radius: 0.7cqi;
     background: var(--container-background-color);
-    padding: 2rem;
-    box-shadow: 0 .2rem .2rem 0 rgba(0, 0, 0, 0.08);
-    
+    padding: 3cqw;
+    box-shadow: 0 0.2cqw 0.2cqw 0 rgba(0, 0, 0, 0.08);
+
     /* style text */
     font-family: system-ui, sans-serif;
+    font-size: 2.5cqw;
     color: var(--font-color);
-    text-shadow: .05rem .05rem  rgba(0, 0, 0, 0.08);
+    text-shadow: 0.2cqw 0.2cqw rgba(0, 0, 0, 0.08);
 
     /* center text */
     display: flex;
@@ -64,7 +67,7 @@
 
 .layer-1 {
     /*  if these aren't set the SVGs sit 
-        at the top of the container */
+          at the top of the container */
     top: inherit;
     left: inherit;
     width: inherit;
@@ -79,7 +82,7 @@
     }
 
     10% {
-        transform: translateY(.15cqw);
+        transform: translateY(0.15cqw);
     }
 
     18% {
@@ -90,9 +93,9 @@
 .layer-1 svg {
     --layer-1-animated-svg-size: 2.5cqw;
 
-    opacity: .3;
+    opacity: 0.3;
     bottom: 0;
-    left: calc(var(--layer-1-animated-svg-size)*-1);
+    left: calc(var(--layer-1-animated-svg-size) * -1);
     width: var(--layer-1-animated-svg-size);
     height: var(--layer-1-animated-svg-size);
     animation-duration: 3s;
@@ -100,90 +103,90 @@
 
 /* the second torii gate */
 .layer-1 svg:nth-child(2) {
-    --custom-size: calc(var(--layer-1-animated-svg-size)*0.7);
+    --custom-size: calc(var(--layer-1-animated-svg-size) * 0.7);
 
-    animation-delay: .7s;
-    left: calc(var(--custom-size)*-1);
+    animation-delay: 0.7s;
+    left: calc(var(--custom-size) * -1);
     width: var(--custom-size);
     height: var(--custom-size);
 }
 
 /* the first tree */
 .layer-1 svg:nth-child(3) {
-    --custom-size: calc(var(--layer-1-animated-svg-size)*.8);
+    --custom-size: calc(var(--layer-1-animated-svg-size) * 0.8);
 
     animation-delay: 1.2s;
-    left: calc(var(--custom-size)*-1);
+    left: calc(var(--custom-size) * -1);
     width: var(--custom-size);
     height: var(--custom-size);
 }
 
 /* the second tree */
 .layer-1 svg:nth-child(4) {
-    --custom-size: calc(var(--layer-1-animated-svg-size)*.9);
+    --custom-size: calc(var(--layer-1-animated-svg-size) * 0.9);
 
-    animation-delay: .5s;
-    left: calc(var(--custom-size)*-1);
+    animation-delay: 0.5s;
+    left: calc(var(--custom-size) * -1);
     width: var(--custom-size);
     height: var(--custom-size);
 }
 
 /* the third tree */
 .layer-1 svg:nth-child(5) {
-    --custom-size: calc(var(--layer-1-animated-svg-size)*1.1);
+    --custom-size: calc(var(--layer-1-animated-svg-size) * 1.1);
 
     animation-delay: 1.25s;
-    left: calc(var(--custom-size)*-1);
+    left: calc(var(--custom-size) * -1);
     width: var(--custom-size);
     height: var(--custom-size);
 }
 
 /* the fourth tree */
 .layer-1 svg:nth-child(6) {
-    --custom-size: calc(var(--layer-1-animated-svg-size)*.9);
+    --custom-size: calc(var(--layer-1-animated-svg-size) * 0.9);
 
     animation-delay: 1.29s;
-    left: calc(var(--custom-size)*-1);
+    left: calc(var(--custom-size) * -1);
     width: var(--custom-size);
     height: var(--custom-size);
 }
 
 /* the fifth tree */
 .layer-1 svg:nth-child(7) {
-    --custom-size: calc(var(--layer-1-animated-svg-size)*1.1);
+    --custom-size: calc(var(--layer-1-animated-svg-size) * 1.1);
 
-    animation-delay: .45s;
-    left: calc(var(--custom-size)*-1);
+    animation-delay: 0.45s;
+    left: calc(var(--custom-size) * -1);
     width: var(--custom-size);
     height: var(--custom-size);
 }
 
 /* the sixth tree */
 .layer-1 svg:nth-child(8) {
-    --custom-size: calc(var(--layer-1-animated-svg-size)*.7);
+    --custom-size: calc(var(--layer-1-animated-svg-size) * 0.7);
 
     animation-delay: 1.8s;
-    left: calc(var(--custom-size)*-1);
+    left: calc(var(--custom-size) * -1);
     width: var(--custom-size);
     height: var(--custom-size);
 }
 
 /* the seventh tree */
 .layer-1 svg:nth-child(9) {
-    --custom-size: calc(var(--layer-1-animated-svg-size)*.9);
+    --custom-size: calc(var(--layer-1-animated-svg-size) * 0.9);
 
     animation-delay: 1.85s;
-    left: calc(var(--custom-size)*-1);
+    left: calc(var(--custom-size) * -1);
     width: var(--custom-size);
     height: var(--custom-size);
 }
 
 /* the third torii gate */
 .layer-1 svg:nth-child(10) {
-    --custom-size: calc(var(--layer-1-animated-svg-size)*.5);
+    --custom-size: calc(var(--layer-1-animated-svg-size) * 0.5);
 
     animation-delay: 2.4s;
-    left: calc(var(--custom-size)*-1);
+    left: calc(var(--custom-size) * -1);
     width: var(--custom-size);
     height: var(--custom-size);
 }
@@ -198,7 +201,7 @@
     }
 
     10% {
-        transform: translateY(.07cqw);
+        transform: translateY(0.07cqw);
     }
 
     18% {
@@ -209,55 +212,55 @@
 .layer-2 svg {
     --layer-2-animated-svg-size: 3.2cqw;
 
-    opacity: .15;
-    bottom: .5cqw;
-    left: calc(var(--layer-2-animated-svg-size)*-1);
+    opacity: 0.15;
+    bottom: 0.5cqw;
+    left: calc(var(--layer-2-animated-svg-size) * -1);
     width: var(--layer-2-animated-svg-size);
     height: var(--layer-2-animated-svg-size);
     animation-duration: 4.5s;
 }
 
 .layer-2 svg:nth-child(2) {
-    --custom-size: calc(var(--layer-2-animated-svg-size)*0.7);
+    --custom-size: calc(var(--layer-2-animated-svg-size) * 0.7);
 
-    animation-delay: .7s;
-    left: calc(var(--custom-size)*-1);
+    animation-delay: 0.7s;
+    left: calc(var(--custom-size) * -1);
     width: var(--custom-size);
     height: var(--custom-size);
 }
 
 .layer-2 svg:nth-child(3) {
-    --custom-size: calc(var(--layer-2-animated-svg-size)*.8);
+    --custom-size: calc(var(--layer-2-animated-svg-size) * 0.8);
 
     animation-delay: 1.7s;
-    left: calc(var(--custom-size)*-1);
+    left: calc(var(--custom-size) * -1);
     width: var(--custom-size);
     height: var(--custom-size);
 }
 
 .layer-2 svg:nth-child(4) {
-    --custom-size: calc(var(--layer-2-animated-svg-size)*.9);
+    --custom-size: calc(var(--layer-2-animated-svg-size) * 0.9);
 
-    animation-delay: .5s;
-    left: calc(var(--custom-size)*-1);
+    animation-delay: 0.5s;
+    left: calc(var(--custom-size) * -1);
     width: var(--custom-size);
     height: var(--custom-size);
 }
 
 .layer-2 svg:nth-child(5) {
-    --custom-size: calc(var(--layer-2-animated-svg-size)*.8);
+    --custom-size: calc(var(--layer-2-animated-svg-size) * 0.8);
 
     animation-delay: 2.5s;
-    left: calc(var(--custom-size)*-1);
+    left: calc(var(--custom-size) * -1);
     width: var(--custom-size);
     height: var(--custom-size);
 }
 
 .layer-2 svg:nth-child(6) {
-    --custom-size: calc(var(--layer-2-animated-svg-size)*.8);
+    --custom-size: calc(var(--layer-2-animated-svg-size) * 0.8);
 
     animation-delay: 3.2s;
-    left: calc(var(--custom-size)*-1);
+    left: calc(var(--custom-size) * -1);
     width: var(--custom-size);
     height: var(--custom-size);
 }
@@ -272,7 +275,7 @@
     }
 
     10% {
-        transform: translateY(.05cqw);
+        transform: translateY(0.05cqw);
     }
 
     18% {
@@ -283,37 +286,37 @@
 .layer-3 svg {
     --layer-3-animated-svg-size: 6cqw;
 
-    opacity: .1;
-    bottom: .3cqw;
-    left: calc(var(--layer-3-animated-svg-size)*-1);
+    opacity: 0.1;
+    bottom: 0.3cqw;
+    left: calc(var(--layer-3-animated-svg-size) * -1);
     width: var(--layer-3-animated-svg-size);
     height: var(--layer-3-animated-svg-size);
     animation-duration: 6s;
 }
 
 .layer-3 svg:nth-child(2) {
-    --custom-size: calc(var(--layer-3-animated-svg-size)*1.2);
+    --custom-size: calc(var(--layer-3-animated-svg-size) * 1.2);
 
     animation-delay: 1s;
-    left: calc(var(--custom-size)*-1);
+    left: calc(var(--custom-size) * -1);
     width: var(--custom-size);
     height: var(--custom-size);
 }
 
 .layer-3 svg:nth-child(3) {
-    --custom-size: calc(var(--layer-3-animated-svg-size)*.9);
+    --custom-size: calc(var(--layer-3-animated-svg-size) * 0.9);
 
     animation-delay: 2s;
-    left: calc(var(--custom-size)*-1);
+    left: calc(var(--custom-size) * -1);
     width: var(--custom-size);
     height: var(--custom-size);
 }
 
 .layer-3 svg:nth-child(4) {
-    --custom-size: calc(var(--layer-3-animated-svg-size)*.9);
+    --custom-size: calc(var(--layer-3-animated-svg-size) * 0.9);
 
     animation-delay: 3.2s;
-    left: calc(var(--custom-size)*-1);
+    left: calc(var(--custom-size) * -1);
     width: var(--custom-size);
     height: var(--custom-size);
 }
